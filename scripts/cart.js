@@ -1,7 +1,10 @@
 
 // adding nav bar in cart page
 import navbar from "../components/navbar.js";
+import footer from "../components/footer.js";
 document.getElementById("navBar").innerHTML=navbar();
+// adding footer page 
+document.getElementById("footer").innerHTML=footer();
 
   let checkoutButton=document.querySelector("#checkoutButtonDiv>button");
    checkoutButton.addEventListener("click",()=>{
