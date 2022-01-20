@@ -99,8 +99,11 @@
 <script type="module">
   import navbar from "./components/navbar.js";
   document.getElementById("navBar").innerHTML=navbar();
-
-
+  let checkoutButton=document.querySelector("#checkoutButtonDiv>button");
+   checkoutButton.addEventListener("click",()=>{
+       window.location.href="./checkout.html";
+   })
+ 
     let data=[
         {
             name:"apple",
@@ -204,6 +207,11 @@
     if(storeData.length>0){
         document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
         document.getElementById("itemAmount").textContent=`Rs ${total}`;
+        // setting the total amount in local storage
+        let totalCost={
+             total:total
+        }
+        localStorage.setItem("checkoutTotal",JSON.stringify(totalCost));
         document.getElementById("totalDivPrice").textContent=`Rs ${total}`;
         document.getElementById("subTotalPrice").textContent=`Rs ${total}`;
         document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${total}`;
@@ -224,6 +232,12 @@
          storeData.map((elem)=>{
              newPrice+=elem.price;
          })
+         // setting the total amount in local storage
+        let totalCost={
+             total:newPrice
+        }
+         // setting total updated amount in localStorage
+         localStorage.setItem("checkoutTotal",JSON.stringify(totalCost));
         document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
         document.getElementById("itemAmount").textContent=`Rs ${newPrice}`;
         document.getElementById("totalDivPrice").textContent=`Rs ${newPrice}`;
@@ -243,6 +257,12 @@
        if(confirm("Are you sure you want to remove all items from your basket?")){
         storeData.splice(0);
         localStorage.setItem("bigbasket",JSON.stringify(storeData));
+        // setting the total amount in local storage
+        let totalCost={
+            total:0
+        }
+         // setting total updated amount in localStorage
+         localStorage.setItem("checkoutTotal",JSON.stringify(totalCost));
         document.getElementById("topTotal").textContent=`There are no items in your basket.`;
         document.getElementById("itemCount").textContent=` 0 items`;
         document.getElementById("itemCountNav").textContent=`0 items`;
