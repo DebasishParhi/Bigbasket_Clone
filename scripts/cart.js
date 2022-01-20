@@ -14,43 +14,12 @@ document.getElementById("footer").innerHTML=footer();
    continueBtn.addEventListener("click",()=>{
        window.location.href="./index.html";
    })
- 
-    let data=[
-        {
-            name:"apple",
-            price:200
-        },
-        {
-            name:"Guava",
-            price:200
-        },
-        {
-            name:"Orange",
-            price:100
-        },
-        {
-            name:"Papaya",
-            price:300
-        },
-        {
-            name:"Grapes",
-            price:300
-        },
-        {
-            name:"Papaya",
-            price:300
-        },
-        {
-            name:"Grapes",
-            price:300
-        }
-    ]
 
-    let cartdb=localStorage.setItem("bigbasket",JSON.stringify(data));
+    var storeData= JSON.parse(localStorage.getItem("bigbasket"))
+    let parent= document.getElementById("cartItems");
     let total=0;
     function showData(data){
-        let parent= document.getElementById("cartItems");
-        parent.innerHTML=" ";
+        parent.innerHTML="";
         data.map((elem,index)=>{
         let childDiv= document.createElement("div");
         childDiv.setAttribute("class","childDiv");
@@ -112,7 +81,6 @@ document.getElementById("footer").innerHTML=footer();
                 parent.append(childDiv)
     })
     }
-   let storeData= JSON.parse(localStorage.getItem("bigbasket"))
     showData(storeData);
     
     if(storeData.length>0){
@@ -157,6 +125,7 @@ document.getElementById("footer").innerHTML=footer();
         document.getElementById("itemCount").textContent=`${storeData.length} items`;
         document.getElementById("itemCountNav").textContent=`${storeData.length} items`;
         showData(storeData);
+    
     }
 
 
