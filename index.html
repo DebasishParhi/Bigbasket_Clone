@@ -11,10 +11,89 @@
 </head>
 <body>
     <div id = "nav">  </div>
-     
+
+    <div class="slideshow">
+
+        <div class="Slide">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_fom_m_bbpl-staples_460_180122_Bangalore.jpg" style="width:100%">
+          <div class="text">Offer on <br> <span>Staples</span> </div>
+        </div>
+        
+        <div class="Slide">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_Weekdayblore_460_200122.jpeg" style="width:100%">
+          <div class="text">Fresho <br> <span>Meat</span></div>
+        </div>
+        
+        <div class="Slide">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_freshoDays_bangalore_460_180122.jpg" style="width:100%">
+          <div class="text">Fresho Fruits &<br><span>Vegetables</span></div>
+        </div>
+
+        <div class="Slide">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_sbf_m_gooddiet_460-251221.jpg" style="width:100%">
+            <div class="text">GoodDiet <br><span>Choice</span></div>
+          </div>
+
+          <div class="Slide">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_sbf_m_snackingstore_460_251221.jpg" style="width:100%">
+            <div class="text">Snacking <br><span>Store</span></div>
+          </div>
+
+          <div class="Slide">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_h_k_m_newyearsale_460_251221.jpg" style="width:100%">
+            <div class="text">Home & <br><span>Kitchen</span></div>
+          </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="circle"></span> 
+          <span class="circle"></span> 
+          <span class="circle"></span> 
+          <span class="circle"></span> 
+          <span class="circle"></span> 
+          <span class="circle"></span> 
+        </div>
+
+     <!-- Footer slide start -->
+
+    <div class="slideshow-container">
+
+        <div class="Slides">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_kgp_m_petstore_251221_400.jpg" style="width:80%; margin-left: 10%;margin-right: 10%;">
+        </div>
+        
+        <div class="Slides">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_kgp_m_bcd_251221_400.jpg" style="width:80%; margin-left: 10%;margin-right: 10%;">
+        </div>
+        
+        <div class="Slides">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_kgp_m_health_suppliment_251221_400.jpg" style="width:80%; margin-left: 10%;margin-right: 10%;">
+        </div>
+
+        <div class="Slides">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_kgp_m_babycare_251221_400.jpg" style="width:80%; margin-left: 10%;margin-right: 10%;">
+          </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div>
+
+         <!-- Footer slide start -->
+
+
     <div id="footer"> </div>
 </body>
 </html>
+<script src="./scripts/slideupper.js"></script>
+<script src="./scripts/sliderfooter.js"></script>
 <script type="module">
     import navbar from './components/navbar.js'
     import footer from './components/footer.js';
@@ -24,4 +103,5 @@
     
     var footer_div = document.getElementById("footer")
     footer_div.innerHTML = footer()
+
 </script>
