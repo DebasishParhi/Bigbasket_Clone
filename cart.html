@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/cart.css">
     <script src="https://kit.fontawesome.com/f3f741aedb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/index.css">
     <title>cart</title>
 </head>
 <body>
@@ -96,7 +97,8 @@
 </body>
 </html>
 <script type="module">
-  import navbar from "./components/"
+  import navbar from "./components/navbar.js";
+  document.getElementById("navBar").innerHTML=navbar();
 
 
     let data=[
