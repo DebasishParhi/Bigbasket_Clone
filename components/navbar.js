@@ -31,7 +31,7 @@ function navbar(){
     </div>
     <div class="three">
         <div class="location"><i class="fas fa-map-marker-alt"></i> <span>560004, Bangalore <i class="fas fa-angle-down"></i></span> <i class="far fa-user"></i><a href="">Login/Sign Up</a></div>
-        <button class="btn1"><a href="./cart.html"><i class="fas fa-shopping-basket fa-3x"></i> <span><sup>My Basket</sup></span><p id="itemCountNav">0 items</p></a></button>
+        <button class="btn1"><a href="login.html"><i class="fas fa-shopping-basket fa-3x"></i> <span><sup>My Basket</sup></span><p>0 items</p></a></button>
     </div>
 </div>
 
