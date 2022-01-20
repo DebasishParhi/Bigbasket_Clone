@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/cart.css">
+    <script src="https://kit.fontawesome.com/f3f741aedb.js" crossorigin="anonymous"></script>
+    <title>cart</title>
+</head>
+<body>
+    <!-- nav bar div -->
+    <div id="navBar"></div>
+    <!-- cart container div -->
+    <div id="cartContainer">
+      <h1 id="topTotal">There are no items in your basket.</h1>
+      <hr>
+      <!-- cart meta data div -->
+        <div id="cartItemInfo">
+         <div id="topHeading">
+             <div id="left">
+                 <div id="leftChild1">
+                     <p>ITEM DESCRIPTION</p>
+                 </div>
+                 <div id="leftChild2">
+                    <p>UNIT PRICE</p>
+                    <p>QUANTITY</p>
+                    <p>SUBTOTAL</p>
+                 </div>
+             </div>
+             <div id="right">
+                <p>SAVINGS</p>
+             </div>
+         </div>
+         <div id="bottomHeading">
+             <div id="bottomContent">
+                 <h3>Fruits and Vegetables</h3>
+                 <p id="itemCount"> 1 item </p>
+                 <p id="itemAmount">Rs 2000</p>
+             </div>
+         </div>
+          <div id="cartItems">
+              <!-- childDiv start -->
+            
+                <!-- child div end -->
+          </div>
+        </div>
+          <!-- items DESCRIPTION div -->
+          <div id="checkoutBox">
+              <div id="leftBox">
+                  <button id="emptyButton"><i class="fas fa-shopping-basket"></i>Empty Basket</button>
+                  <button>Continue Shopping</button>
+              </div>
+              <div id="rightBox">
+                  <div id="checkoutMain">
+                     <div id="box1">
+                        <div id="subTotalDiv">
+                            <div id="totalDiv">
+                                <p>Subtotal</p>
+                                 <h3 id="subTotalPrice">Rs 2000</h3>
+                            </div>
+                            <div id="deliveryDiv">
+                                <h3>Delivery Charges </h3>
+                                <h3>---</h3>
+                            </div>
+                            <div id="totalPayDiv">
+                                <h2>TOTAL</h2>
+                                <h2 id="totalDivPrice">Rs 2000</h2>
+                            </div>
+                            
+                        </div>
+                        <div id="SavedDiv">
+                            <p>Saved 00.00</p>
+                        </div>
+                     </div>
+                     <div>
+                        <p id="cuponTotal">* For this order: Accepted food coupon is Rs. 552.19</p>
+                        <hr>
+                    </div>
+                    <div id="checkoutButtonDiv">
+                        <button>CHECKOUT
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                        </button>
+                    </div>
+                    <p>** Actual delivery charges computed at checkout time</p>
+                  </div>
+                 
+                  
+              </div>
+              
+          </div>
+
+          
+    </div>
+     
+</body>
+</html>
+<script type="module">
+  import navbar from "./components/"
+
+
+    let data=[
+        {
+            name:"apple",
+            price:200
+        },
+        {
+            name:"Guava",
+            price:200
+        },
+        {
+            name:"Orange",
+            price:100
+        },
+        {
+            name:"Papaya",
+            price:300
+        },
+        {
+            name:"Grapes",
+            price:300
+        },
+        {
+            name:"Papaya",
+            price:300
+        },
+        {
+            name:"Grapes",
+            price:300
+        }
+    ]
+
+    let cartdb=localStorage.setItem("bigbasket",JSON.stringify(data));
+    let total=0;
+    function showData(data){
+        let parent= document.getElementById("cartItems");
+        parent.innerHTML=" ";
+        data.map((elem,index)=>{
+        let childDiv= document.createElement("div");
+        childDiv.setAttribute("class","childDiv");
+        let leftCDiv= document.createElement("div");
+         leftCDiv.setAttribute("class","leftC");
+
+         let leftItemDiv= document.createElement("div");
+         leftItemDiv.setAttribute("class","leftItem");
+         let brandName=document.createElement("h5");
+         brandName.textContent="FRESHO";
+         let title=document.createElement("p");
+          title.textContent=elem.name;
+          leftItemDiv.append(brandName,title);
+        //  right item div
+        let rightItemDiv= document.createElement("div");
+         rightItemDiv.setAttribute("class","rightItem");
+         let unitPrice= document.createElement("p");
+        unitPrice.setAttribute("class","unitPrice");
+         unitPrice.textContent="Rs"+elem.price;
+         // button div
+         let buttonDiv=document.createElement("div");
+         buttonDiv.setAttribute("class","quantityBtnDiv");
+         let plusButton=document.createElement("button");
+         plusButton.setAttribute("class","increase");
+         plusButton.textContent="+";
+         let valueButton=document.createElement("button");
+         valueButton.setAttribute("class","showQuantity");
+         valueButton.textContent=1;
+         let minusButton=document.createElement("button");
+         minusButton.setAttribute("class","decrease");
+         minusButton.textContent="-";
+         buttonDiv.append(plusButton,valueButton,minusButton);
+
+         let priceDeleteDiv=document.createElement("div");
+         priceDeleteDiv.setAttribute("class","priceAndDeleteDiv");
+         let subTotalPrice= document.createElement("p");
+          subTotalPrice.setAttribute("class","subTotalPrice");
+         subTotalPrice.textContent="Rs "+elem.price;
+        //    delete icon div
+         let deleteIconDiv=document.createElement("div");
+          deleteIconDiv.setAttribute("class","deleteIcon");
+          let icon=document.createElement("i");
+          icon.setAttribute("class","fas fa-times");
+          icon.addEventListener("click",()=>{
+              deleteItem(index);
+          })
+          deleteIconDiv.append(icon);
+          priceDeleteDiv.append(subTotalPrice,deleteIconDiv);
+          rightItemDiv.append(unitPrice,buttonDiv,priceDeleteDiv)
+          leftCDiv.append(leftItemDiv,rightItemDiv);
+           
+           let rightCDiv=document.createElement("div");
+            rightCDiv.setAttribute("class","rightC");
+            let savedPrice=document.createElement("p");
+            savedPrice.textContent="Rs 00.00";
+            rightCDiv.append(savedPrice);
+            childDiv.append(leftCDiv,rightCDiv);
+                total+=elem.price;
+                parent.append(childDiv)
+    })
+    }
+   let storeData= JSON.parse(localStorage.getItem("bigbasket"))
+    showData(storeData);
+    
+    if(storeData.length>0){
+        document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
+        document.getElementById("itemAmount").textContent=`Rs ${total}`;
+        document.getElementById("totalDivPrice").textContent=`Rs ${total}`;
+        document.getElementById("subTotalPrice").textContent=`Rs ${total}`;
+        document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${total}`;
+        document.getElementById("itemCount").textContent=`${storeData.length} items`;
+    }
+    else{
+        document.getElementById("topTotal").textContent=`There are no items in your basket.`;
+        document.getElementById("itemCount").textContent=` 0 items`;
+    }
+
+    
+
+    function  deleteItem(index){
+        let newPrice=0;
+        storeData.splice(index,1);
+        localStorage.setItem("bigbasket",JSON.stringify(storeData));
+         storeData.map((elem)=>{
+             newPrice+=elem.price;
+         })
+        document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
+        document.getElementById("itemAmount").textContent=`Rs ${newPrice}`;
+        document.getElementById("totalDivPrice").textContent=`Rs ${newPrice}`;
+        document.getElementById("subTotalPrice").textContent=`Rs ${newPrice}`;
+        document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${newPrice}`;
+        document.getElementById("itemCount").textContent=`${storeData.length} items`;
+        showData(storeData);
+    }
+
+
+    let emptyButton=document.getElementById("emptyButton");
+    emptyButton.addEventListener("click",emptyCart);
+
+    function emptyCart(){
+    
+       if(confirm("Are you sure you want to remove all items from your basket?")){
+        storeData.splice(0);
+        localStorage.setItem("bigbasket",JSON.stringify(storeData));
+        document.getElementById("topTotal").textContent=`There are no items in your basket.`;
+        document.getElementById("itemCount").textContent=` 0 items`;
+        document.getElementById("itemAmount").textContent=`Rs 00.00`;
+        document.getElementById("totalDivPrice").textContent=`Rs 00.00`;
+        document.getElementById("subTotalPrice").textContent=`Rs 00.00`;
+        document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs 00.00`;
+        showData(storeData);
+       }
+    }
+    console.log(total)
+</script>
