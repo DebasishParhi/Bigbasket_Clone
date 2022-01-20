@@ -307,3 +307,24 @@ ul > li :hover{
     color: gray;
 }
 /* Footer end */
+
+
+.slideshow-container{
+  margin-top: 50px;
+}
+
+.text {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    width: 5%;
+    margin-left: 50%;
+    text-align: center;
+    border-bottom: 4px solid rgb(132,194,37);
+  }
+  .text >span{
+      color: gray;
+      font-size: 12px;
+  }
