@@ -169,3 +169,141 @@ ul > li :hover{
     color: black;
 }
 
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 850px;
+    margin-top: 50px;
+    
+}
+.footer > .box{
+    width: 80%;
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 105;
+    border-bottom: 1px dotted rgb(223, 215, 215);
+    display: flex;
+}
+.f1{
+    width: 25%;
+    height: 100%;
+}
+.f1 > p > a{
+    text-decoration: none;
+    color: gray;
+}
+#fbrand{
+    font-size: 18px;
+    color:rgb(132,194,37);
+}
+#fdes{
+    font-size: 14px;
+}
+#fdes:hover{
+    color:rgb(132,194,37);
+}
+.f3 > img{
+    margin-top: 5px;
+}
+.f4 > a> {
+    text-decoration: none;
+}
+.f4 > a > .fab{
+    font-size: 35px;  
+    margin-left: 5px;
+}
+.fa-facebook{
+   color: rgb(59,89,152);
+}
+.fa-pinterest{
+    color: rgb(219,50,54);
+}
+.fa-twitter{
+    color: rgb(0,172,237);
+}
+.fa-instagram{
+    color: rgb(81,127,164);
+}
+.cat{
+    display: flex;
+    width: 80%;
+    height: 37%;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 5px;
+}
+.headingcat{
+    width: 20%;
+    color:rgb(132,194,37);
+    font-size: 15px;
+}
+.headingcat > p{
+    padding: 15px 5px 10px 20px;
+}
+#cities{
+    padding-top: 24px;
+}
+#las{
+    padding-top: 55px;
+}
+
+.descat{
+    width: 80%;
+}
+.descat > p{
+    padding: 5px 5px 10px 20px;
+}
+#brands > a{
+    text-decoration: none;
+    color: gray;
+}
+#brands > a:hover{
+    text-decoration: none;
+    color: rgb(132,194,37);
+}
+#brands{
+    color: gray;
+}
+#paymentcard{
+    display: flex;
+}
+#paymentcard > span{
+    margin: 10px;
+}
+
+#footerpayment{
+    width: 70px;
+    height: 30px;
+}
+#cashon{
+    font-size: 16px;
+    font-weight:bold;
+    display: inline-flex;
+    width: 55px;
+    color: gray;
+}
+#footerpayment5{
+    width: 90px;
+    height: 30px;
+}
+#footerpayment6{
+    width: 50px;
+    height: 30px;
+}
+
+.copyright{
+    width: 100%;
+    margin-top: 4%;
+    height:5%;
+    border: 1px soild black;
+    background-color: rgb(234,234,234);
+}
+.copyright > p{
+    margin-left: 10%;
+    font-size: 14px;
+    padding-top: 1%;
+    color: gray;
+}
+/* Footer end */
