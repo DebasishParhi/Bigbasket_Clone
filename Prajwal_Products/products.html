@@ -4,143 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://www.bbassets.com/static/v2498/images/favicon.ico?v=2498" type="image/x-icon" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
     <style>
-    
-        #products{
-            display: grid;
-            grid-template-columns:repeat(4,1fr);
-            grid-gap: 10px;
-        }
-        #mdiv{
-            display: flex;
-            /* border: 1px solid red; */
-        }
-        #mdiv > div> img{
-            height: 30px;
-           
-            /* width: 50px; */
-            padding-top: 10px;
-            padding-right: 5px;
-            
-        }
-     
-        #divTwo{
-            /* border: 1px solid red; */
-            height: 50px;
-            /* width: 120px; */
-            font-size: 12px;
-            padding-left: 10px;
-        }
-     
-        #offdiv{
-            /* width: 150px; */
-            text-align: right;
-            color: red;
-            height: 20px;
-            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-            
-        }
-        #mainDiv{
-            /* border: 1px solid red; */
-            height: 350px;
-            width: 200px;
-            padding: 15px;
-
-        }
-        #mainDiv:hover{
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-        }
-        #imgid{
-            margin-left: 20px;
-            margin-top: 5px;
-            
-        }
-        #fresh{
-            color: gray;
-            font-size: 13px;
-        }
-        #logo{
-            width: 18px;
-            height: 18px;
-        }
-        #price2{
-            text-decoration: line-through;
-            margin-right: 5px;
-            color: grey;
-        }
-        #qtydiv{
-            display: flex;
-            margin-left: 10px;
-        }
-        #btndiv{
-            display: flex;
-            margin-top: 10px;
-        }
-        #qtybox{
-            width: 50px;
-            text-align: center;
-            background-color: white;
-            /* border: 1px solid red; */
-            margin-left: 5px;
-            padding-top: 2px;
-        }
-        #cartbtn{
-            background-color: rgb(243, 167, 26);
-            width: 70px;
-            height: 22px;
-            margin-left: 10px;
-            border: 0.2px;
-
-        }
-        #coldiv{
-            background-color: rgb(243, 240, 240);
-            padding-bottom: 20px;
-        }
-        #cat{
-            /* border: 1px solid red; */
-            width: 250px;
-            height: 1600px;
-            font-size: 20px;
-            padding-left: 15px;
-            margin-left: 150px;
-            color: gray;
-        }
-      
-        #inp{
-            height: 20px;
-            width: 220px;
-        }
-     
-        #cont{
-            display: flex;
-        }
-        #types{
-            font-size: 18px;
-            line-height: 5px;
-            padding-left: 10px;    
-        }
-        #types>p:hover{
-            color: rgb(129,227,143);
-            cursor: pointer;
-        }
-        #hov:hover{
-            color: rgb(129,227,143);
-            cursor: pointer;
-        }
-        #color{
-            text-decoration: underline 3px rgb(132,194,37);
-        }
-        #brand>input>input:hover{
-            color: rgb(129,227,143);
-            cursor: pointer;
-        }
-
 
 
     </style>
 </head>
 <body>
+    <div id="nav"></div>
+    <div ><img id="slide" src="https://www.bigbasket.com/media/uploads/banner_images/L1-CXNP6744-1200X300-1stDEC21.jpg" alt=""></div>
+    <div><img id="slide" src="https://www.bigbasket.com/media/uploads/flatpages/test-1/Fruits%20&%20vegetables.jpg" alt=""></div>
+    <div id="fruits">Fruits and Vegetables(365) 
+        <div> <select id="sortPrice">
+            <option>Sort by your Choice</option>
+            <option value="asc">Low To High</option>
+            <option value="dsc">High To Low</option>
+            <option value="nasc">Ascending</option>
+            <option value="ndsc">Descending</option>
+        </select></div>
+    </div>
     <div id="cont">
         <div id="cat"><h2 id="color">Category</h2>
             <div>Fruits And Vegetables
@@ -157,7 +42,7 @@
             <div id="brand"><h4 id="color">Brand</h4>
                 <input id="inp" type="text" placeholder="Search by Brand"><br>
                 <input  type="checkbox" > <span id="hov"> bb Combo </span><br>
-                <input type="checkbox"><span id="hov">Fresho</span> <br>
+                <input type="checkbox"><span id="hov"> Fresho</span> <br>
             </div>
             <div id="seasonal"><h4 id="color">Seasonal</h4>
                 <input type="checkbox"><span id="hov"> Summer Fruits </span><br>
@@ -167,19 +52,19 @@
             </div>
             <div id="origin">
                 <h4 id="color">Country Of Origin</h4>
-                <input type="checkbox"><span id="hov">Australia</span> <br>
-                <input type="checkbox"><span id="hov">Greece</span> <br>
-                <input type="checkbox"><span id="hov">India </span><br>
-                <input type="checkbox"><span id="hov">Italy </span><br>
-                <input type="checkbox"><span id="hov">South Africa </span><br>
-                <input type="checkbox"><span id="hov">Thailand </span><br>
-                <input type="checkbox"><span id="hov">Iran </span><br>
-                <input type="checkbox"><span id="hov">USA  </span><br>
-                <input type="checkbox"><span id="hov">Egypt </span><br>
-                <input type="checkbox"><span id="hov">Peru </span><br>
-                <input type="checkbox"><span id="hov">New Zealand </span><br>
-                <input type="checkbox"><span id="hov">Turkey </span><br>
-                <input type="checkbox"><span id="hov">Chile </span><br>       
+                <input type="checkbox"><span id="hov"> Australia</span> <br>
+                <input type="checkbox"><span id="hov"> Greece</span> <br>
+                <input type="checkbox"><span id="hov"> India </span><br>
+                <input type="checkbox"><span id="hov"> Italy </span><br>
+                <input type="checkbox"><span id="hov"> South Africa </span><br>
+                <input type="checkbox"><span id="hov"> Thailand </span><br>
+                <input type="checkbox"><span id="hov"> Iran </span><br>
+                <input type="checkbox"><span id="hov"> USA  </span><br>
+                <input type="checkbox"><span id="hov"> Egypt </span><br>
+                <input type="checkbox"><span id="hov"> Peru </span><br>
+                <input type="checkbox"><span id="hov"> New Zealand </span><br>
+                <input type="checkbox"><span id="hov"> Turkey </span><br>
+                <input type="checkbox"><span id="hov"> Chile </span><br>       
             </div>
             <div id="price">
                 <h4 id="color">Price</h4> 
@@ -204,157 +89,170 @@
         </div>
         <div id="products"></div>
     </div>
+    <div id="footer"></div>
   
 </body>
 </html>
-<script>
+<script type="module">
+    import navbar from "./components/navbar.js" ;
+    import footer from './components/footer.js'; 
+    var nav_bar = document.getElementById("nav")
+    nav_bar.innerHTML = navbar()
+
+    var footer_div = document.getElementById("footer")
+    footer_div.innerHTML = footer()
+
 let data=[{
     name:"Onion",
     off:"Get 30% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40075537_5-fresho-onion.jpg",
-    mrp:"Rs 38.38",
-    mrp2:"Rs 55.00",
+    mrp:38.38,
+    mrp2:"55.00",
 },
 {
     name:"Tomato - Local",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000203_16-fresho-tomato-local.jpg",
-    mrp:"Rs 26.26",
-    mrp2:"Rs 32.83",
+    mrp:26.26,
+    mrp2:"32.83",
 },
 {
     name:"Potato",
     off:"Get 29% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000159_25-fresho-potato.jpg",
-    mrp:"Rs 28.28",
-    mrp2:"Rs 40.00",
+    mrp:28.28,
+    mrp2:"40.00",
 },
 {
     name:"Tomato - Hybrid",
     off:"Get 25% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000201_15-fresho-tomato-hybrid.jpg",
-    mrp:"Rs 14.14",
-    mrp2:"Rs 18.75",
+    mrp:14.14,
+    mrp2:"18.75",
 },
 {
     name:"Ladies Finger",
     off:"Get 41% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000144_13-fresho-ladies-finger.jpg",
-    mrp:"Rs 22.22",
-    mrp2:"Rs 37.50",
+    mrp:22.22,
+    mrp2:"37.50",
 },
 {
     name:"Carrot - Orange",
     off:"Get 27% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000072_16-fresho-carrot-orange.jpg",
-    mrp:"Rs 49.49",
-    mrp2:"Rs 68.63",
+    mrp:49.49,
+    mrp2:"68.63",
 },
 {
     name:"Cucumber",
     off:"Get 27% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000103_16-fresho-cucumber.jpg",
-    mrp:"Rs 10.10",
-    mrp2:"Rs 13.90",
+    mrp:10.10,
+    mrp2:"13.90",
 },
 {
     name:"Banana - Yelakki",
     off:"Get 32% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg",
-    mrp:"Rs 55.27",
-    mrp2:"Rs 81.85",
+    mrp:55.27,
+    mrp2:"81.85",
 },
 {
     name:"Coriander Leaves",
     off:"Get 46% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg",
-    mrp:"Rs 10.10",
-    mrp2:"Rs 18.75",
+    mrp:10.10,
+    mrp2:"18.75",
 },
 {
     name:"Mushrooms - Button",
     off:"Get 39% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000273_16-fresho-mushrooms-button.jpg",
-    mrp:"Rs 44.44",
-    mrp2:"Rs 72.50",
+    mrp:44.44,
+    mrp2:"72.50",
 },
 {
     name:"Capsicum - Green",
     off:"Get 25% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000069_20-fresho-capsicum-green.jpg",
-    mrp:"Rs 37.37",
-    mrp2:"Rs 50.00",
+    mrp:37.37,
+    mrp2:"50.00",
 },
 {
     name:"Palak - Cleaned, without roots",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000188_12-fresho-palak-cleaned-without-roots.jpg",
-    mrp:"Rs 22.50",
-    mrp2:"Rs 28.13",
+    mrp:22.50,
+    mrp2:"28.13",
 },
 {
     name:"Beans - Haricot",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40089743_2-fresho-beans-haricot.jpg",
-    mrp:"Rs 16.50",
-    mrp2:"Rs 20.63",
+    mrp:16.50,
+    mrp2:"20.63",
 },
 {
     name:"Orange - Nagpur, Regular",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000266_27-fresho-orange-nagpur-regular.jpg",
-    mrp:"Rs 89.00",
-    mrp2:"Rs 111.25",
+    mrp:89.00,
+    mrp2:"111.25",
 },
 {
     name:"Tender Coconut - Medium",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40057966_2-fresho-tender-coconut-medium.jpg",
-    mrp:"Rs 30.00",
-    mrp2:"Rs 37.50",
+    mrp:30.00,
+    mrp2:"37.50",
 },
 {
     name:"Lemon",
     off:"Get 35% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000127_17-fresho-lemon.jpg",
-    mrp:"Rs 12.12",
-    mrp2:"Rs 18.75",
+    mrp:12.12,
+    mrp2:"18.75",
 },
 {
     name:"Potato - New Crop",
     off:"Get 31% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40048457_7-fresho-potato-new-crop.jpg",
-    mrp:"Rs 37.00",
-    mrp2:"Rs 53.75",
+    mrp:37.00,
+    mrp2:"53.75",
 },
 {
     name:"Onion - Organically Grown",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40023472_5-fresho-onion-organically-grown.jpg",
-    mrp:"Rs 45.00",
-    mrp2:"Rs 55.25",
+    mrp:45.00,
+    mrp2:"55.25",
 },
 {
     name:"Coconut - Medium",
     off:"Get 29% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/10000093_16-fresho-coconut-medium.jpg",
-    mrp:"Rs 23.23",
-    mrp2:"Rs 32.50",
+    mrp:23.23,
+    mrp2:"32.50",
 },
 {
     name:"Tomato - Local, Organically Grown",
     off:"Get 20% off",
     image_url:"https://www.bigbasket.com/media/uploads/p/s/40022638_4-fresho-tomato-local-organically-grown.jpg",
-    mrp:"Rs 19.00",
-    mrp2:"Rs 23.75",
+    mrp:19.00,
+    mrp2:"23.75",
 }
 ]
 
+
 display(data);
+
+
 
 function display(data){
     let prd=document.getElementById("products")
-  data.forEach(function(elem){
+    prd.innerHTML="";
+  data.forEach(function(elem,index){
     var mainDiv=document.createElement("div");
     mainDiv.setAttribute("id","mainDiv")
     var image=document.createElement("img");
@@ -367,7 +265,7 @@ function display(data){
 
     var name=document.createElement("h7");
     name.style.fontSize="20px"
-    fresh=document.createElement("div")
+    var fresh=document.createElement("div")
     fresh.setAttribute("id","fresh")
     fresh.textContent="Fresho"
     name.textContent=elem.name;
@@ -381,7 +279,7 @@ function display(data){
     var price2=document.createElement("h7");
     price2.textContent=elem.mrp2;
     price2.setAttribute("id","price2")
-    price.textContent=elem.mrp;
+    price.textContent=`Rs ${elem.mrp}`;
     price.style.fontSize="18px"
 
     var truck=document.createElement("img")
@@ -399,11 +297,11 @@ function display(data){
     divTwo.append(price2,price,div3);
     mdiv.append(divOne,divTwo)
 
-    coldiv=document.createElement("div")
+    var coldiv=document.createElement("div")
     coldiv.setAttribute("id","coldiv")
     
 //button 
-    qtybox=document.createElement("button")
+    var qtybox=document.createElement("div")
     qtybox.setAttribute("id","qtybox")
     qtybox.innerText="1"
 
@@ -413,15 +311,16 @@ function display(data){
     var count=2;
     btn.addEventListener("click",function(){
         qtybox.textContent=count++;
+        addtocart(elem.name,elem.mrp);
 
       })
 
 
-    btndiv=document.createElement("div")
+    var btndiv=document.createElement("div")
     btndiv.setAttribute("id","btndiv");
-    qtydiv=document.createElement("div")
+    var qtydiv=document.createElement("div")
     qtydiv.setAttribute("id","qtydiv")
-    qty=document.createElement("id","qty")
+    var qty=document.createElement("id","qty")
     qty.textContent="Qty"
     
 
@@ -438,5 +337,47 @@ function display(data){
     prd.append(mainDiv);
 });
 }
+function addtocart(name,price){
+    let cartdata=JSON.parse(localStorage.getItem("bigbasket")) || [];
+    let obj={
+        name:name,
+        price:price,
+    }
+    cartdata.push(obj);
+    localStorage.setItem("bigbasket",JSON.stringify(cartdata));
+     
+}
+var sort=document.getElementById("sortPrice");
+sort.addEventListener("change",function priceSort(){
+    var sel=document.querySelector("#sortPrice").value;
+    if(sel=="asc"){
+        data.sort(function(a,b){
+            return a.mrp-b.mrp;
+        })
+    }
+    if(sel=="dsc"){
+        data.sort(function(a,b){
+            return b.mrp-a.mrp;
+        })
+    }
+    if(sel=="nasc"){
+        data.sort(function(a,b){
+     if(b.name>a.name){
+         return -1;
+     }
+    })
+    }
+    if(sel=="ndsc"){
+        data.sort(function(a,b){
+     if(a.name>b.name){
+         return -1;
+     }
+    })
+    }
+    display(data);
+});
+
+
+
 
 </script>
