@@ -312,6 +312,7 @@ function display(data){
     btn.addEventListener("click",function(){
         qtybox.textContent=count++;
         addtocart(elem.name,elem.mrp);
+        alert(`${elem.name} is added successfully`)
 
       })
 
@@ -337,6 +338,7 @@ function display(data){
     prd.append(mainDiv);
 });
 }
+
 function addtocart(name,price){
     let cartdata=JSON.parse(localStorage.getItem("bigbasket")) || [];
     let obj={
@@ -344,9 +346,13 @@ function addtocart(name,price){
         price:price,
     }
     cartdata.push(obj);
-    localStorage.setItem("bigbasket",JSON.stringify(cartdata));
-     
+    document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
+    localStorage.setItem("bigbasket",JSON.stringify(cartdata)); 
+
 }
+ let cartdata= JSON.parse(localStorage.getItem("bigbasket"))
+document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
+ 
 var sort=document.getElementById("sortPrice");
 sort.addEventListener("change",function priceSort(){
     var sel=document.querySelector("#sortPrice").value;

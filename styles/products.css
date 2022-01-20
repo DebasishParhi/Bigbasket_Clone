@@ -392,6 +392,7 @@ ul > li :hover{
     height: 22px;
     margin-left: 10px;
     border: 0.2px;
+    cursor: pointer;
 
 }
 #coldiv{
