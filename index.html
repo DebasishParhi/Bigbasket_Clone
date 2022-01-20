@@ -12,17 +12,16 @@
 <body>
     <div id = "nav">  </div>
      
-    <div class="footer">
-            
-    </div>
+    <div id="footer"> </div>
 </body>
 </html>
 <script type="module">
     import navbar from './components/navbar.js'
+    import footer from './components/footer.js';
 
     var nav_bar = document.getElementById("nav")
     nav_bar.innerHTML = navbar()
     
-    
-
+    var footer_div = document.getElementById("footer")
+    footer_div.innerHTML = footer()
 </script>
