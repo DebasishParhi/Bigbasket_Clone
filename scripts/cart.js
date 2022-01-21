@@ -85,14 +85,14 @@ document.getElementById("footer").innerHTML=footer();
     
     if(storeData.length>0){
         document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
-        document.getElementById("itemAmount").textContent=`Rs ${total}`;
+        document.getElementById("itemAmount").textContent=`Rs ${total.toFixed(2)}`;
         // setting the total amount in local storage
         let totalCost={
              total:total
         }
         localStorage.setItem("checkoutTotal",JSON.stringify(totalCost));
-        document.getElementById("totalDivPrice").textContent=`Rs ${total}`;
-        document.getElementById("subTotalPrice").textContent=`Rs ${total}`;
+        document.getElementById("totalDivPrice").textContent=`Rs ${total.toFixed(2)}`;
+        document.getElementById("subTotalPrice").textContent=`Rs ${total.toFixed(2)}`;
         document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${total}`;
         document.getElementById("itemCount").textContent=`${storeData.length} items`;
         document.getElementById("itemCountNav").textContent=`${storeData.length} items`;
@@ -118,9 +118,9 @@ document.getElementById("footer").innerHTML=footer();
          // setting total updated amount in localStorage
          localStorage.setItem("checkoutTotal",JSON.stringify(totalCost));
         document.getElementById("topTotal").textContent=`Your Basket (${storeData.length} items)`;
-        document.getElementById("itemAmount").textContent=`Rs ${newPrice}`;
-        document.getElementById("totalDivPrice").textContent=`Rs ${newPrice}`;
-        document.getElementById("subTotalPrice").textContent=`Rs ${newPrice}`;
+        document.getElementById("itemAmount").textContent=`Rs ${newPrice.toFixed(2)}`;
+        document.getElementById("totalDivPrice").textContent=`Rs ${newPrice.toFixed(2)}`;
+        document.getElementById("subTotalPrice").textContent=`Rs ${newPrice.toFixed(2)}`;
         document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${newPrice}`;
         document.getElementById("itemCount").textContent=`${storeData.length} items`;
         document.getElementById("itemCountNav").textContent=`${storeData.length} items`;
