@@ -634,9 +634,10 @@
 
     var nav_bar = document.getElementById("nav")
     nav_bar.innerHTML = navbar()
+    var footer_div = document.getElementById("footer")
+    footer_div.innerHTML = footer();
+
     let cartdata= JSON.parse(localStorage.getItem("bigbasket"))
     document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
-    var footer_div = document.getElementById("footer")
-    footer_div.innerHTML = footer()
 
 </script>
