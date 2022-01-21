@@ -22,5 +22,5 @@ function apply(){
 document.getElementById("pay_btn").addEventListener("click", payment)
 function payment(){
     window.location.href="payment.html"
-    
+
 }
