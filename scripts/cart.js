@@ -121,7 +121,7 @@ document.getElementById("footer").innerHTML=footer();
         document.getElementById("itemAmount").textContent=`Rs ${newPrice.toFixed(2)}`;
         document.getElementById("totalDivPrice").textContent=`Rs ${newPrice.toFixed(2)}`;
         document.getElementById("subTotalPrice").textContent=`Rs ${newPrice.toFixed(2)}`;
-        document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${newPrice}`;
+        document.getElementById("cuponTotal").textContent=`* For this order: Accepted food coupon is Rs.${newPrice.toFixed(2)}`;
         document.getElementById("itemCount").textContent=`${storeData.length} items`;
         document.getElementById("itemCountNav").textContent=`${storeData.length} items`;
         showData(storeData);
