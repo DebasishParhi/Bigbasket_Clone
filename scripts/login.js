@@ -35,6 +35,10 @@ function start_shopping(){
 
     document.querySelector(".popup").style.display = "none";
     document.querySelector(".about-you").style.display = "none";
+   
+    window.location.href="./index.html";
+
+
 
     var setname = localStorage.getItem("firstname");
     document.getElementById("name").innerHTML= setname;
