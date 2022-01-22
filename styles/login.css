@@ -1,6 +1,9 @@
 
 .button{
     color: gray;
+    text-decoration: none;
+    font-size: 30px;
+    color: lime;
 }
 
 .popup{
