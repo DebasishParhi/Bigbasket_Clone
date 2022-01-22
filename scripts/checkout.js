@@ -3,7 +3,7 @@ console.log(totalA)
 document.getElementById("Rs3").textContent=`${(totalA.total + 20).toFixed(2)}`
 
 
-document.getElementById("Rs1").textContent=`${totalA.total}`
+document.getElementById("Rs1").textContent=`${(totalA.total).toFixed(2)}`
 
 
 let payableAmt=totalA.total+20;
