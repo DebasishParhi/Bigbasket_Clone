@@ -216,7 +216,7 @@ var count=2;
 btn.addEventListener("click",function(){
     qtybox.textContent=count++;
     addtocart(elem.name,elem.mrp);
-    alert(`${elem.name} is added successfully`)
+    // alert(`${elem.name} is added successfully`)
 
   })
 
