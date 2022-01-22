@@ -311,6 +311,7 @@ ul > li :hover{
 
 .slideshow-container{
   margin-top: 50px;
+  margin-right: 2%;
 }
 
 .text {
@@ -328,3 +329,4 @@ ul > li :hover{
       color: gray;
       font-size: 12px;
   }
+ 
