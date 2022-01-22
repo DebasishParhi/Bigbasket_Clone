@@ -2,7 +2,7 @@
 
 // onclick button for seeing loginpage.
 
-document.querySelector(".button").addEventListener("click",function(){
+document.querySelector("#loginbutton").addEventListener("click",function(){
     document.querySelector(".popup").style.display = "flex";
     document.querySelector(".popup-content").style.display = "inline";
 })
