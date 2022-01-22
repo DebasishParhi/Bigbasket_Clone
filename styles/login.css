@@ -1,9 +1,12 @@
 
 .button{
-    color: gray;
-    text-decoration: none;
+    color: limegreen;
     font-size: 30px;
-    color: lime;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .popup{
