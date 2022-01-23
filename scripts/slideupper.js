@@ -1,6 +1,8 @@
+// variable to store index
 var slideIndex = 0;
+// calling the function
 Slides();
-
+// creating the function which contains code to slide the images
 function Slides() {
   var i;
   var slides = document.getElementsByClassName("Slide");

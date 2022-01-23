@@ -1,5 +1,6 @@
+// adding click event on pay button
 document.getElementById("pay").addEventListener("click", pay);
-
+// creating the function 
 function pay() {
   let cardNo = document.getElementById("card_no").value;
   let v = document.getElementById("valid").value;

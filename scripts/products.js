@@ -1,11 +1,13 @@
+// importing the navbar and footer
 import navbar from "../components/navbar.js" ;
 import footer from '../components/footer.js'; 
+// calling the imported functions
 var nav_bar = document.getElementById("nav")
 nav_bar.innerHTML = navbar()
 
 var footer_div = document.getElementById("footer")
 footer_div.innerHTML = footer()
-
+// product data
 let data=[{
 name:"Onion",
 off:"Get 30% off",
@@ -148,14 +150,16 @@ mrp2:"23.75",
 }
 ]
 
-
+// calling the display function
 display(data);
 
 
-
+// creating the display function
 function display(data){
+    // getting the parent div to append the products
 let prd=document.getElementById("products")
 prd.innerHTML="";
+// mapping the created products data
 data.forEach(function(elem,index){
 var mainDiv=document.createElement("div");
 mainDiv.setAttribute("id","mainDiv")
@@ -213,6 +217,7 @@ var btn = document.createElement("button");
 btn.textContent="Add";
 btn.setAttribute("id","cartbtn");
 var count=2;
+// adding click event to add items in the cart
 btn.addEventListener("click",function(){
     qtybox.textContent=count++;
     addtocart(elem.name,elem.mrp);
@@ -242,21 +247,26 @@ mainDiv.append(idiv,veg,fresh,name,coldiv);
 prd.append(mainDiv);
 });
 }
-
+// add to cart function 
 function addtocart(name,price){
+    // creating local storage
 let cartdata=JSON.parse(localStorage.getItem("bigbasket")) || [];
+// creating object to store cart data
 let obj={
     name:name,
     price:price,
 }
 cartdata.push(obj);
+// settig the total cart items
 document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
+// setting local storage
 localStorage.setItem("bigbasket",JSON.stringify(cartdata)); 
 
 }
+// getting the local storage of cart data
 let cartdata= JSON.parse(localStorage.getItem("bigbasket"))
 document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
-
+// adding sort functionality 
 var sort=document.getElementById("sortPrice");
 sort.addEventListener("change",function priceSort(){
 var sel=document.querySelector("#sortPrice").value;

@@ -631,19 +631,20 @@
 <script src="./scripts/slideupper.js"></script>
 <script src="./scripts/sliderfooter.js"></script>
 <script type="module">
+    // importing the navbar and footer
     import navbar from './components/navbar.js'
     import footer from './components/footer.js';
-
+    // calling and adding the navbar function
     var nav_bar = document.getElementById("nav")
     nav_bar.innerHTML = navbar()
 
-
+    // adding footer and calling the function
     var footer_div = document.getElementById("footer")
     footer_div.innerHTML = footer()
 
     var footer_div = document.getElementById("footer")
     footer_div.innerHTML = footer();
-
+ // adding the total count of  cart items 
     let cartdata= JSON.parse(localStorage.getItem("bigbasket"))
     document.getElementById("itemCountNav").textContent=`${cartdata.length} item`;
 
