@@ -1,5 +1,13 @@
 #  Welcome to our project Bigbasket_Clone 
 # Run project from here : https://bigbasket-clone.vercel.app/
+
+### Tech stacks used :
+
+*  **Html** 
+*  **CSS** 
+*  **Java Script** 
+
+
 # We are 6 member of team and cloned this project using HTML,CSS,LocalStorage and Advance js. This project contains some basic functionalities a user can search any items there and a user can purchase any items also a user can add to cart there items 
 
 ![Screenshot (58)](https://user-images.githubusercontent.com/96133324/165305045-93e728bf-93aa-4de0-9689-f0fab9c6f54b.png)
